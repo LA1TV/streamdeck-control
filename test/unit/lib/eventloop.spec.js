@@ -1,5 +1,4 @@
-const index = require('../../src/index')
-const delay = require('../helpers/delay')
+const eventloop = require('../../../src/lib/eventloop')
 
 console.info = jest.fn()
 
@@ -9,14 +8,8 @@ describe('index', () => {
   })
 
   it('should output a starting command to the console', () => {
-    index()
+    eventloop()
     expect(console.info).toHaveBeenCalledTimes(1)
-    expect(console.info).toHaveBeenCalledWith('Launching streamdeck...')
-  })
-
-  it('should launch the eventloop', async () => {
-    index()
-    await delay(1000)
     expect(console.info).toHaveBeenCalledWith('event')
   })
 })
