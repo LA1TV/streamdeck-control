@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "An npm module to launch the elgato streamdeck control",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
   "devDependencies": {
     "eslint": "^5.13.0",
     "eslint-config-standard": "^12.0.0",
@@ -22,7 +24,9 @@
     "test:jest": "jest --coverage",
     "test:jest:watch": "npm run test:jest -- --watch"
   },
-  "engines" : { "node" : ">=10" },
+  "engines": {
+    "node": ">=10"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LA1TV/streamdeck-control.git"
