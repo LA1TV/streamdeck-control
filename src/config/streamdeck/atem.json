@@ -5,7 +5,7 @@
   "buttons": [
     {
       "name": "Camera 1",
-      "type": "atem",
+      "controlModule": "atem",
       "command": "cut_camera_1",
       "colour": "#FF0000",
       "icon": ""
