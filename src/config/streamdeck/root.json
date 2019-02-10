@@ -1,0 +1,11 @@
+{
+    "name": "Root",
+    "description": "Folder at the root. 15 buttons are only avalible to this folder",
+    "buttons": [
+      {
+        "type": "foler",
+        "name": "ATEM",
+        "command": "atem"
+      }
+    ]
+  }

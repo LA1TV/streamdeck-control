@@ -1,0 +1,14 @@
+{
+  "name": "ATEM",
+  "description": "Folder to control the Atem. 14 buttons avalible, Button 15 is the return to root.",
+  "parentFolder": "root",
+  "buttons": [
+    {
+      "name": "Camera 1",
+      "type": "atem",
+      "command": "cut_camera_1",
+      "colour": "#FF0000",
+      "icon": ""
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "atem": {
+      "type": "TCP",
+      "ip": "127.0.0.1",
+      "commands": {
+        "input1": "someTCPsignal"
+      }
+  } 
+}
