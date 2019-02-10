@@ -3,9 +3,9 @@ const clone = require('lodash').clone
 const eventloop = (commandsToExecute) => {
   const newCommands = clone(commandsToExecute)
 
-  newCommands.forEach(commandObject => {
-    const controlModule = require(`./interfaces/${commandObject.type}`)
-    controlModule.runCommand(commandObject.command)
+  newCommands.forEach(({ controlModule, command }) => {
+    const controller = require(`./controlModules/${controlModule}`)
+    controller.runCommand(command)
   })
   console.info('event')
 }

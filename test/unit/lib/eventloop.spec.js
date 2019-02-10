@@ -1,5 +1,5 @@
 const eventloop = require('../../../src/lib/eventloop')
-const atem = require('../../../src/lib/interfaces/atem')
+const atem = require('../../../src/lib/controlModules/atem')
 
 atem.runCommand = jest.fn()
 console.info = jest.fn()
@@ -19,7 +19,7 @@ describe('index', () => {
   it('should clone and run the commands its passed', () => {
     const commandsToExecute = [
       {
-        'type': 'atem',
+        'controlModule': 'atem',
         'command': 'someCommand'
       }
     ]
