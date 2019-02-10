@@ -1,0 +1,4 @@
+# Elagto Streamdeck controller
+
+A controller for the elgato streamdeck that uses an event loop to abstract
+away the external control from the device making development easier.
