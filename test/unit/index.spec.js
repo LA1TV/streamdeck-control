@@ -8,13 +8,13 @@ describe('index', () => {
     console.info.mockClear()
   })
 
-  it('should output a starting command to the console', () => {
+  it.skip('should output a starting command to the console', () => {
     index()
     expect(console.info).toHaveBeenCalledTimes(1)
     expect(console.info).toHaveBeenCalledWith('Launching streamdeck...')
   })
 
-  it('should launch the eventloop', async () => {
+  it.skip('should launch the eventloop', async () => {
     index()
     await delay(1000)
     expect(console.info).toHaveBeenCalledWith('event')

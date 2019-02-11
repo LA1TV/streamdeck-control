@@ -4,7 +4,8 @@
   "description": "An npm module to launch the elgato streamdeck control",
   "main": "index.js",
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "stream-deck-api-mazeppa": "^0.1.2"
   },
   "devDependencies": {
     "eslint": "^5.13.0",
