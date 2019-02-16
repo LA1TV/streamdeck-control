@@ -1,5 +1,5 @@
 {
-    "name": "Root",
+    "name": "root",
     "description": "Folder at the root. 15 buttons are only avalible to this folder",
     "buttons": [
       {

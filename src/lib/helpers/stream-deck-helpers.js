@@ -18,4 +18,4 @@ const helpers = command => {
   }
 }
 
-module.exports = { helpers }
+module.exports = helpers

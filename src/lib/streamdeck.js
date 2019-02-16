@@ -1,19 +1,39 @@
 const streamDeckApi = require('stream-deck-api-mazeppa')
-const { setup } = require('./helpers/stream-deck-helpers')
+// const { setup } = require('./helpers/stream-deck-helpers')
 
-const loadFolder = (folder = 'root') => {
-  return require(`../config/streamdeck/${folder}`)
+let layout = {}
+
+const padEmptyButtons = config => {
+  const newButtons = config.buttons
+  while (newButtons.length < 15) {
+    newButtons.push({ name: '' })
+  }
+  if (config.name !== 'root') {
+    newButtons[14] = {
+      name: 'Root',
+      'controlModule': 'folder',
+      'command': 'root'
+    }
+  }
+  return newButtons
+}
+
+const loadFolder = (folder = 'atem') => {
+  const config = require(`../config/streamdeck/${folder}`)
+
+  return padEmptyButtons(config)
 }
 
 const streamDeckInterface = (commandsToExecute) => {
-  const streamDeck = streamDeckApi.getStreamDeck()
-  setup({})
+//   const streamDeck = streamDeckApi.getStreamDeck()
+//   setup({})
 
-  loadFolder()
+  layout = loadFolder()
+  console.log(layout)
 
-  streamDeck.on('down', setup.keyPress)
-  streamDeck.on('up', setup.keyRelease)
-  streamDeck.on('error', setup.error)
+//   streamDeck.on('down', setup.keyPress)
+//   streamDeck.on('up', setup.keyRelease)
+//   streamDeck.on('error', setup.error)
 }
 
 module.exports = streamDeckInterface
