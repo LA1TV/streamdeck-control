@@ -1,4 +1,7 @@
 const streamDeckApi = require('stream-deck-api-mazeppa')
+const AtemApi = require('atem')
+const atem = new AtemApi('192.168.72.51')
+atem.connect()
 let layout = {}
 
 const padEmptyButtons = config => {
@@ -37,12 +40,12 @@ const loadFolder = (folder = 'root', streamDeck) => {
 
 const launchStreamdeck = () => {
   console.info('Launching streamdeck...')
+  console.log('Atem State: ', atem.state)
 
   const streamDeck = streamDeckApi.getStreamDeck()
 
   layout = loadFolder('root', streamDeck)
 
-  streamDeck.on('error', console.log)
   streamDeck.on('down', (buttonNumber) => {
     const button = layout.buttons[buttonNumber - 1]
     if (button.disabled) return
@@ -50,7 +53,17 @@ const launchStreamdeck = () => {
       console.log('load folder')
       layout = loadFolder(button.command, streamDeck)
     }
+    if (button.controlModule === 'atem') {
+      console.log('atem')
+      atem.setProgram(buttonNumber)
+    }
   })
+
+  atem.on('connectionStateChange', console.info)
+  atem.on('error', console.error)
+  atem.on('programBus', console.info)
+
+  streamDeck.on('error', console.error)
 }
 
 module.exports = launchStreamdeck
