@@ -25,15 +25,15 @@ const loadFolder = (folder = 'atem') => {
 }
 
 const streamDeckInterface = (commandsToExecute) => {
-//   const streamDeck = streamDeckApi.getStreamDeck()
-//   setup({})
+  const streamDeck = streamDeckApi.getStreamDeck()
+  //   setup({})
 
   layout = loadFolder()
   console.log(layout)
 
-//   streamDeck.on('down', setup.keyPress)
-//   streamDeck.on('up', setup.keyRelease)
-//   streamDeck.on('error', setup.error)
+  //   streamDeck.on('down', setup.keyPress)
+  //   streamDeck.on('up', setup.keyRelease)
+  streamDeck.on('error', console.log)
 }
 
 module.exports = streamDeckInterface
