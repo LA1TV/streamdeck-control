@@ -37,6 +37,41 @@
       "command": "cut_camera_5",
       "textColour": "white",
       "backgroundColour": "red"
+    },
+    {
+      "name": "CAM 1",
+      "controlModule": "atem",
+      "command": "preview_camera_1",
+      "textColour": "white",
+      "backgroundColour": "green"
+    },
+    {
+      "name": "CAM 2",
+      "controlModule": "atem",
+      "command": "preview_camera_2",
+      "textColour": "white",
+      "backgroundColour": "green"
+    },
+    {
+      "name": "CAM 3",
+      "controlModule": "atem",
+      "command": "preview_camera_3",
+      "textColour": "white",
+      "backgroundColour": "green"
+    },
+    {
+      "name": "CAM 4",
+      "controlModule": "atem",
+      "command": "preview_camera_4",
+      "textColour": "white",
+      "backgroundColour": "green"
+    },
+    {
+      "name": "CAM 5",
+      "controlModule": "atem",
+      "command": "preview_camera_5",
+      "textColour": "white",
+      "backgroundColour": "green"
     }
   ]
 }
