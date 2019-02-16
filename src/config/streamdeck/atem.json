@@ -6,72 +6,86 @@
     {
       "name": "CAM 1",
       "controlModule": "atem",
-      "command": "cut_camera_1",
+      "command": "cut_input_1",
       "textColour": "white",
       "backgroundColour": "red"
     },
     {
       "name": "CAM 2",
       "controlModule": "atem",
-      "command": "cut_camera_2",
+      "command": "cut_input_2",
       "textColour": "white",
       "backgroundColour": "red"
     },
     {
       "name": "CAM 3",
       "controlModule": "atem",
-      "command": "cut_camera_3",
+      "command": "cut_input_3",
       "textColour": "white",
       "backgroundColour": "red"
     },
     {
       "name": "CAM 4",
       "controlModule": "atem",
-      "command": "cut_camera_4",
+      "command": "cut_input_11",
       "textColour": "white",
       "backgroundColour": "red"
     },
     {
       "name": "CAM 5",
       "controlModule": "atem",
-      "command": "cut_camera_5",
+      "command": "cut_input_12",
       "textColour": "white",
       "backgroundColour": "red"
     },
     {
       "name": "CAM 1",
       "controlModule": "atem",
-      "command": "preview_camera_1",
+      "command": "preview_input_1",
       "textColour": "white",
       "backgroundColour": "green"
     },
     {
       "name": "CAM 2",
       "controlModule": "atem",
-      "command": "preview_camera_2",
+      "command": "preview_input_2",
       "textColour": "white",
       "backgroundColour": "green"
     },
     {
       "name": "CAM 3",
       "controlModule": "atem",
-      "command": "preview_camera_3",
+      "command": "preview_input_3",
       "textColour": "white",
       "backgroundColour": "green"
     },
     {
       "name": "CAM 4",
       "controlModule": "atem",
-      "command": "preview_camera_4",
+      "command": "preview_input_11",
       "textColour": "white",
       "backgroundColour": "green"
     },
     {
       "name": "CAM 5",
       "controlModule": "atem",
-      "command": "preview_camera_5",
+      "command": "preview_input_12",
       "textColour": "white",
       "backgroundColour": "green"
+    },
+    {
+      "name": "SSrc",
+      "controlModule": "atem",
+      "command": "cut_super_source",
+      "textColour": "white",
+      "backgroundColour": "red"
+    },
+    {
+      "name": "VT",
+      "controlModule": "atem",
+      "command": "cut_input_4",
+      "textColour": "white",
+      "backgroundColour": "red"
     }
   ]
 }

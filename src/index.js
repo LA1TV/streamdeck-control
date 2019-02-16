@@ -1,6 +1,7 @@
 const streamDeckApi = require('stream-deck-api-mazeppa')
 const AtemApi = require('atem')
 const atem = new AtemApi('192.168.72.51')
+const atemControl = require('./lib/atem.js')
 atem.connect()
 let layout = {}
 
@@ -53,10 +54,7 @@ const launchStreamdeck = () => {
       console.log('load folder')
       layout = loadFolder(button.command, streamDeck)
     }
-    if (button.controlModule === 'atem') {
-      console.log('atem')
-      atem.setProgram(buttonNumber)
-    }
+    if (button.controlModule === 'atem') atemControl(atem, button.command)
   })
 
   atem.on('connectionStateChange', console.info)
