@@ -76,7 +76,7 @@
     {
       "name": "SSrc",
       "controlModule": "atem",
-      "command": "cut_super_source",
+      "command": "cut_input_6000",
       "textColour": "white",
       "backgroundColour": "red"
     },
@@ -84,6 +84,20 @@
       "name": "VT",
       "controlModule": "atem",
       "command": "cut_input_4",
+      "textColour": "white",
+      "backgroundColour": "red"
+    },
+    {
+      "name": "MP1",
+      "controlModule": "atem",
+      "command": "cut_input_3010",
+      "textColour": "white",
+      "backgroundColour": "red"
+    },
+    {
+      "name": "MP2",
+      "controlModule": "atem",
+      "command": "cut_input_3020",
       "textColour": "white",
       "backgroundColour": "red"
     }

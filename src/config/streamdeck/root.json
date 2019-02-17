@@ -8,6 +8,13 @@
         "command": "atem",
         "textColour": "white",
         "backgroundColour": "black"
+      },
+      {
+        "name": "LIGHTS",
+        "controlModule": "folder",
+        "command": "lights",
+        "textColour": "white",
+        "backgroundColour": "black"
       }
     ]
   }

@@ -1,0 +1,35 @@
+{
+    "name": "Lights",
+    "description": "Folder to control the Lights. 14 buttons avalible, Button 15 is the return to root.",
+    "parentFolder": "root",
+    "buttons": [
+      {
+        "name": "Red",
+        "controlModule": "lights",
+        "command": { "1": 255, "2": 0, "3": 0, "4": 0 },
+        "textColour": "white",
+        "backgroundColour": "red"
+      },
+      {
+        "name": "Green",
+        "controlModule": "lights",
+        "command": { "1": 0, "2": 255, "3": 0, "4": 0 },
+        "textColour": "white",
+        "backgroundColour": "green"
+      },
+      {
+        "name": "Blue",
+        "controlModule": "lights",
+        "command": { "1": 0, "2": 0, "3": 255, "4": 0 },
+        "textColour": "white",
+        "backgroundColour": "blue"
+      },
+      {
+        "name": "Amber",
+        "controlModule": "lights",
+        "command": { "1": 0, "2": 0, "3": 0, "4": 255 },
+        "textColour": "white",
+        "backgroundColour": "amber"
+      }
+    ]
+  }

@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "atem": "^0.1.8",
+    "dmx": "^0.2.2",
     "lodash": "^4.17.11",
     "stream-deck-api-mazeppa": "^0.1.2"
   },

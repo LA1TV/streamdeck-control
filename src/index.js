@@ -1,7 +1,26 @@
 const streamDeckApi = require('stream-deck-api-mazeppa')
 const AtemApi = require('atem')
 const atem = new AtemApi('192.168.72.51')
-const atemControl = require('./lib/atem.js')
+const DMX = require('dmx')
+const dmx = new DMX()
+const universe = dmx.addUniverse('demo', 'enttec-usb-dmx-pro', '/dev/cu.usbserial-6AU95XGB')
+const lightsController = require('./lib/lights')(universe)
+
+// off
+universe.update({ 1: 0, 2: 0, 3: 0, 4: 0, 5: 255 })
+
+// Red
+universe.update({ 1: 255, 2: 0, 3: 0, 4: 0, 5: 255 })
+
+// Green
+universe.update({ 1: 0, 2: 255, 3: 0, 4: 0, 5: 255 })
+
+// Blue
+universe.update({ 1: 0, 2: 0, 3: 255, 4: 0, 5: 255 })
+
+// Amber
+universe.update({ 1: 0, 2: 0, 3: 0, 4: 255, 5: 255 })
+
 atem.connect()
 let layout = {}
 
@@ -41,7 +60,7 @@ const loadFolder = (folder = 'root', streamDeck) => {
 
 const launchStreamdeck = () => {
   console.info('Launching streamdeck...')
-  console.log('Atem State: ', atem.state)
+  // console.log('Atem State: ', atem.state.toString())
 
   const streamDeck = streamDeckApi.getStreamDeck()
 
@@ -54,12 +73,11 @@ const launchStreamdeck = () => {
       console.log('load folder')
       layout = loadFolder(button.command, streamDeck)
     }
-    if (button.controlModule === 'atem') atemControl(atem, button.command)
+    if (button.controlModule === 'lights') lightsController(button.command)
+    // if (button.controlModule === 'atem') atemControl(atem, button.command)
   })
 
-  atem.on('connectionStateChange', console.info)
-  atem.on('error', console.error)
-  atem.on('programBus', console.info)
+  // atem.on('sourceConfiguration', console.info)
 
   streamDeck.on('error', console.error)
 }
