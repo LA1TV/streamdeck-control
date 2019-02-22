@@ -28,8 +28,36 @@
         "name": "Amber",
         "controlModule": "lights",
         "command": { "1": 0, "2": 0, "3": 0, "4": 255 },
+        "textColour": "Black",
+        "backgroundColour": "yellow"
+      },
+      {
+        "name": "Yellow",
+        "controlModule": "lights",
+        "command": { "1": 255, "2": 255, "3": 0, "4": 0 },
+        "textColour": "Black",
+        "backgroundColour": "yellow"
+      },
+      {
+        "name": "Purple",
+        "controlModule": "lights",
+        "command": { "1": 255, "2": 0, "3": 255, "4": 0 },
         "textColour": "white",
-        "backgroundColour": "amber"
+        "backgroundColour": "purple"
+      },
+      {
+        "name": "Teal",
+        "controlModule": "lights",
+        "command": { "1": 0, "2": 255, "3": 255, "4": 0 },
+        "textColour": "white",
+        "backgroundColour": "teal"
+      },
+      {
+        "name": "White",
+        "controlModule": "lights",
+        "command": { "1": 255, "2": 255, "3": 255, "4": 0 },
+        "textColour": "black",
+        "backgroundColour": "white"
       }
     ]
   }

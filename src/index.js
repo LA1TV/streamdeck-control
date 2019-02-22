@@ -1,6 +1,6 @@
 const streamDeckApi = require('stream-deck-api-mazeppa')
 const AtemApi = require('atem')
-const atem = new AtemApi('192.168.72.51')
+// const atem = new AtemApi('192.168.72.51')
 const DMX = require('dmx')
 const dmx = new DMX()
 const universe = dmx.addUniverse('demo', 'enttec-usb-dmx-pro', '/dev/cu.usbserial-6AU95XGB')
@@ -21,7 +21,7 @@ universe.update({ 1: 0, 2: 0, 3: 255, 4: 0, 5: 255 })
 // Amber
 universe.update({ 1: 0, 2: 0, 3: 0, 4: 255, 5: 255 })
 
-atem.connect()
+// atem.connect()
 let layout = {}
 
 const padEmptyButtons = config => {
