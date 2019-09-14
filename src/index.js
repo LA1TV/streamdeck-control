@@ -73,7 +73,7 @@ const launchStreamdeck = () => {
       console.log('load folder')
       layout = loadFolder(button.command, streamDeck)
     }
-    if (button.controlModule === 'lights') lightsController(button.command)
+    if (button.controlModule === 'lights') lightsController({ command: button.command, subCommand: button.subCommand })
     // if (button.controlModule === 'atem') atemControl(atem, button.command)
   })
 

@@ -55,9 +55,17 @@
       {
         "name": "White",
         "controlModule": "lights",
-        "command": { "1": 255, "2": 255, "3": 255, "4": 0 },
+        "command": { "1": 255, "2": 255, "3": 255, "4": 255 },
         "textColour": "black",
         "backgroundColour": "white"
+      },
+      {
+        "name": "F.Red",
+        "controlModule": "lights",
+        "command": { "1": 255, "2": 0, "3": 0, "4": 0 },
+        "subCommand": {"type": "flash", "duration": "500"},
+        "textColour": "white",
+        "backgroundColour": "red"
       }
     ]
   }
