@@ -1,6 +1,6 @@
 let active = false
-let currentCommand = {}
-let currentState = {}
+let currentCommand = ''
+let currentState = ''
 
 const DARK = { '1': 0, '2': 0, '3': 0, '4': 0 }
 const delay = (time) => new Promise((resolve) => setTimeout(resolve, time))
@@ -29,6 +29,7 @@ const lightsController = (universe) => async ({ command, subCommand: { type = 's
   }
   if (type === 'flash') {
     currentCommand = JSON.stringify(command)
+    currentState = ''
     await flash({ universe, command, duration })
   }
 }
